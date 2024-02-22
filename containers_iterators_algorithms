@@ -1,0 +1,83 @@
+Types of STL Container in C++
+
+In C++, there are generally 3 kinds of STL containers:
+
+    Sequential Containers
+    Associative Containers
+    Unordered Associative Containers
+
+Sequential Containers in C++
+
+    In C++, sequential containers allow us to store elements that can be accessed in sequential order.
+
+    Internally, sequential containers are implemented as arrays or linked lists data structures.
+
+    Types of Sequential Containers
+        Array
+        Vector
+        Deque
+        List
+        Forward List
+
+Associative Containers in C++
+
+  In C++, associative containers allow us to store elements in sorted order. The order doesn't depend upon when the element is inserted.
+  
+  Internally, they are implemented as binary tree data structures.
+  
+  Types of Associative Containers
+  
+      Set
+      Map
+      Multiset
+      Multimap
+
+
+ Iterator:
+
+    Defintion: generalization of pointer - provides a standard interface for accessing elements of STL containers or any container supporting iterators without caring about the container implementation or the container internal data representation.
+    Types of iterators:
+        Input Iterator
+            Read-only and can be read only once.
+            istream_iterator(istream& is);
+        Output Iterator
+            Write-only
+            Example: ostream_iterator(ostream& os);
+        Forward Iterator
+            Gathering input + output iterators
+            Example: std::forward_list::iterator, std::unordered_map::iterator
+        Bidirectional Iterator
+            Like Forward Iterator, but also has operator–
+            Example: std::list::iterator
+        Random Access Iterator
+            Has overloaded operator[], pointer arithmetic
+            Example: pointer to C-array and vector or deque iterators.
+
+
+Standard Template Library: Algorithms
+  The header <algorithm> de�nes a collection of functions especially designed to be used on
+  ranges of elements.
+  A range is any sequence of objects that can be accessed through iterators or pointers, such as
+  an array or an instance of some of the STL containers. Notice though, that algorithms operate
+  through iterators directly on the values, not affecting in any way the structure of any possible
+  container (it never affects the size or storage allocation of the container).
+
+    Non-modifying sequence operations:
+        all_of: Test condition on all elements in range 
+        adjacent_find: Find equal adjacent elements in range 
+        any_of: Test if any element in range fulfills condition 
+        count_if: Return number of elements in range satisfying condition 
+        count: Count appearances of value in range 
+        equal: Test whether the elements in two ranges are equal 
+        find_end: Find last subsequence in range 
+        find_first_of: Find element from set in range 
+        find_if_not: Find element in range (negative condition) 
+        find_if: Find element in range 
+        find: Find value in range 
+        for_each: Apply function to range 
+        is_permutation: Test whether range is permutation of another 
+        mismatch: Return first position where two ranges differ 
+        none_of: Test if no elements fulfill condition 
+        search_n: Search range for elements 
+        search: Search range for subsequence 
+
